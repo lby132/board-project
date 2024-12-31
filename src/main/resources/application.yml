@@ -22,3 +22,16 @@ spring:
       hibernate.default_batch_fetch_size: 100
   h2.console.enabled: true
   sql.init.mode: always
+
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: testdb
+  datasource:
+    url: jdbc:h2:mem:boardcamp;mode=mysql
+    driver-class-name: org.h2.Driver
+  sql.init.mode: always
+  test.database.replace: none # 기본으로 설정된 테스트 디비를 자동으로 불러오지 않고 yml 파일에서 profile: testdb 에 설정한 url을 적용하기 위해 사용
