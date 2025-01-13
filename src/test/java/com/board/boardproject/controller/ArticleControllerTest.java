@@ -28,7 +28,7 @@ class ArticleControllerTest {
         // given
 
         //when & then
-        mvc.perform(get("/articles/"))
+        mvc.perform(get("/articles"))
                 .andExpect(status().isOk())
                 .andExpect(content().contentTypeCompatibleWith(MediaType.TEXT_HTML))
                 .andExpect(view().name("articles/index"))
