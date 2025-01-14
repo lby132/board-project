@@ -12,7 +12,7 @@ import java.util.List;
 @Controller
 public class ArticleController {
 
-    @GetMapping("/")
+    @GetMapping
     public String articles(ModelMap map) {
         map.addAttribute("articles", List.of());
         return "articles/index";
